@@ -86,7 +86,7 @@ int Ext4::check(const char *fsPath) {
         args[4] = NULL;
 
         rc = android_fork_execvp(ARRAY_SIZE(args), (char **)args, &status, false,
-                true);
+            true);
 
         switch(rc) {
         case 0:

@@ -137,7 +137,7 @@ int Ntfs::doMount(const char *fsPath, const char *mountPoint,
         SLOGE("%s appears to be a read only filesystem - retrying mount RO", fsPath);
         strcat(mountData, ",ro");
         rc = android_fork_execvp(ARRAY_SIZE(args), (char **)args, &status, false,
-                true);
+            true);
     }
 
     if (rc == 0 && createLost) {
