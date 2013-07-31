@@ -22,7 +22,7 @@
 #include "Volume.h"
 
 #ifndef VOLD_MAX_PARTITIONS
-#define VOLD_MAX_PARTITIONS 4
+#define VOLD_MAX_PARTITIONS 32
 #endif
 
 typedef android::List<char *> PathCollection;
@@ -30,7 +30,6 @@ typedef android::List<char *> PathCollection;
 class DirectVolume : public Volume {
 public:
     static const int MAX_PARTITIONS = VOLD_MAX_PARTITIONS;
-
 protected:
     PathCollection *mPaths;
     int            mDiskMajor;
@@ -40,7 +39,7 @@ protected:
     int            mOrigDiskMinor;
     int            mOrigPartMinors[MAX_PARTITIONS];
     int            mDiskNumParts;
-    unsigned char  mPendingPartMap;
+    unsigned int   mPendingPartMap;
     int            mIsDecrypted;
     int            mFlags;
 
