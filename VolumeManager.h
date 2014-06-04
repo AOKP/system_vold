@@ -155,6 +155,7 @@ private:
     bool isMountpointMounted(const char *mp);
     bool isAsecInDirectory(const char *dir, const char *asec) const;
     int openLun(int number);
+    bool isLegalAsecId(const char *id) const;
 };
 
 extern "C" {
