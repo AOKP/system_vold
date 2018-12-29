@@ -140,7 +140,7 @@ cc_library_static {
                 "libarcobbvolume",
             ],
         },
-        lineage: {
+        aokp: {
             supports_hw_fde: {
                 cflags: ["-DCONFIG_HW_DISK_ENCRYPTION"],
                 header_libs: ["libcryptfs_hw_headers"],
@@ -169,7 +169,7 @@ cc_binary {
                 "libarcobbvolume",
             ],
         },
-        lineage: {
+        aokp: {
             supports_hw_fde: {
                 shared_libs: ["libcryptfs_hw"],
             },
